@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617; 
+  --foreground: #f8fafc; 
+
+  --color-primary: #10b981; 
+  --color-accent: #f59e0b; 
+  
+  --surface: #1e293b; 
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary-DEFAULT: var(--color-primary);
+  --color-accent-DEFAULT: var(--color-accent);
+  --color-surface-DEFAULT: var(--surface);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card-surface {
+    background-color: var(--surface);
+    border: 1px solid rgba(45, 55, 72, 0.5); 
+    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.1), 0 1px 3px rgba(16, 185, 129, 0.05); 
+    border-radius: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--background); 
+    font-weight: 600; 
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #059669; 
+}
